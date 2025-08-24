@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                AI Chat
+            </div>
+            <button id="new-chat-btn" class="new-chat-btn">
+                <i class="fas fa-plus"></i>
+                New Chat
+            </button>
+        </div>
+
+        <div class="chat-history">
+            <div class="chat-history-header">
+                <i class="fas fa-history"></i>
+                Recent Chats
+            </div>
+            <div id="chat-list" class="chat-list"></div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <div class="avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-info">
+                    <div class="user-name">
+                        Guest
+                    </div>
+                    <div class="status">
+                        <i class="fas fa-circle"></i>
+                        Online
+                    </div>
+                </div>
+                <button type="button" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <div id="overlay" class="overlay"></div>
+
+    <main class="main-content">
+        <header class="chat-header">
+            <div class="chat-info">
+                <div class="bot-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="chat-details">
+                    <h1>AI Assistant</h1>
+                    <div class="status-indicator">
+                        <i class="fas fa-circle"></i>
+                        Online
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="chat-container">
+            <div id="chat-box" class="chat-box"></div>
+
+            <div id="typing-indicator" class="typing-indicator">
+                AI is typing...
+                <div class="typing-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <form id="chat-form" class="chat-form">
+                <div class="input-container">
+                    <button type="button" class="attachment-btn">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <textarea id="user-input" placeholder="Type your message..." rows="1"></textarea>
+                    <button id="send-btn" class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="input-footer">
+                    <div id="char-count">0/2000</div>
+                    <div class="input-actions">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
